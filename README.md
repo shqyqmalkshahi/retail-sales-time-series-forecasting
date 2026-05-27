@@ -102,9 +102,9 @@ This approach is well-suited for retail data with strong seasonal behavior.
 
 ## Limitations
 
-- Model assumes consistent seasonal patterns  
-- Does not include external variables (e.g., promotions, weather)  
-- Performance may degrade under extreme structural changes  
+- Holt-Winters assumes repeating seasonal patterns
+- External factors such as weather, promotions, or economic indicators were not included
+- Extreme disruptions may reduce forecast accuracy  
 
 ---
 
@@ -113,15 +113,18 @@ This approach is well-suited for retail data with strong seasonal behavior.
 - Incorporate exogenous variables (economic indicators, promotions)  
 - Test advanced models (ARIMA, SARIMA, Prophet)  
 - Perform cross-validation for time series  
-- Automate retraining pipeline  
+- Automate retraining pipeline
+-  Add external variables such as holidays, promotions, or economic indicators
+- Compare Holt-Winters with ARIMA, SARIMA, or Prophet
+- Add rolling validation for stronger time series evaluation
 
 ---
 
 ## Project Structure
 
-- `.ipynb` → analysis and forecasting model  
-- `.csv` → forecast outputs  
-- `data/` → dataset reference  
+- `retail_sales_time_series.ipynb` → analysis and forecasting model  
+- `us_retail_sales_predictions.csv` → forecast outputs  
+- `dus_retail_sales.csv` → dataset reference  
 
 ---
 
